@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import PageLayout from "../../components/Client/PageLayout";
 
 const ProductDetail = () => {
   return (
-    <div>ProductDetail</div>
-  )
-}
+    <>
+      <PageLayout></PageLayout>
+    </>
+  );
+};
 
-export default ProductDetail
+export default ProductDetail;

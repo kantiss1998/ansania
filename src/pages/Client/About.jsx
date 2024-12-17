@@ -1,21 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Title from "../../components/Client/Common/Title";
-import Navbar from "../../components/Client/Navbar";
-import bagus from "../../assets/bagus.png"
-import Footer from "../../components/Client/Footer";
+import bagus from "../../assets/bagus.png";
+import PageLayout from "../../components/Client/PageLayout";
 
 const About = () => {
   return (
     <>
-      <Navbar />
-      <div className="container py-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <PageLayout>
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center text-2xl mt-10 lg:my-16"
+          className="text-center text-2xl py-4"
         >
           <Title text1={"About"} text2={"US"} />
         </motion.div>
@@ -58,9 +56,9 @@ const About = () => {
             </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center">
-            <img 
-              src={bagus} 
-              alt="ANSANIA Hijab Collection" 
+            <img
+              src={bagus}
+              alt="ANSANIA Hijab Collection"
               className="rounded-lg shadow-lg max-w-full h-auto object-cover w-full max-h-[500px]"
             />
           </div>
@@ -86,16 +84,19 @@ const About = () => {
           {[
             {
               title: "Quality Assurance:",
-              description: "We meticulously select and craft each product to ensure it meets our high standards of quality and elegance."
+              description:
+                "We meticulously select and craft each product to ensure it meets our high standards of quality and elegance.",
             },
             {
               title: "Convenience:",
-              description: "Our user-friendly platform and efficient ordering process make shopping with us a breeze."
+              description:
+                "Our user-friendly platform and efficient ordering process make shopping with us a breeze.",
             },
             {
               title: "Exceptional Customer Service:",
-              description: "Our dedicated team is here to support you every step of the way, ensuring your satisfaction is our top priority."
-            }
+              description:
+                "Our dedicated team is here to support you every step of the way, ensuring your satisfaction is our top priority.",
+            },
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -105,14 +106,11 @@ const About = () => {
               <h4 className="text-lg font-bold text-gray-800 mb-3">
                 {item.title}
               </h4>
-              <p className="text-gray-600">
-                {item.description}
-              </p>
+              <p className="text-gray-600">{item.description}</p>
             </motion.div>
           ))}
         </motion.div>
-      </div>
-      <Footer />
+      </PageLayout>
     </>
   );
 };

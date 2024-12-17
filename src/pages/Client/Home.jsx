@@ -4,6 +4,8 @@ import Footer from "../../components/Client/Footer";
 import bagus from "../../assets/bagus.png";
 import ProductCard from "../../components/Client/Card/ProductCard1";
 import HijabHeroBannerSlider from "../../components/Client/HeroBanner/HeroBanner1";
+import ClientLayout from "../../components/Client/ClientLayout";
+import PageLayout from "../../components/Client/PageLayout";
 
 const Home = () => {
   const sampleProduct = [
@@ -164,9 +166,8 @@ const Home = () => {
   ];
   return (
     <>
-      <Navbar className="px-10" />
       <HijabHeroBannerSlider />
-      <div className="flex-1 lg:p-24 md:p-20">
+      <PageLayout>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {sampleProduct.map((product) => (
             <ProductCard key={product.id} product={product} />
@@ -178,8 +179,7 @@ const Home = () => {
             Tidak ada produk yang sesuai dengan filter
           </div>
         )}
-      </div>
-      <Footer />
+      </PageLayout>
     </>
   );
 };
